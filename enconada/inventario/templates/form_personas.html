@@ -1,0 +1,15 @@
+<h1>Agregar a un nuevo usuario</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit">
+</form>
+<h2>Lista de Usuarios</h2>
+    <ul>
+        {% for persona in personas %}
+        <li>{{ persona.nombre }} {{ persona.apellido }} - {{ persona.ci }}</li>
+        {% endfor %}
+    </ul>
+    
